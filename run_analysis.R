@@ -27,6 +27,6 @@ getAndCleanUCIData <- function() {
     subjects <- read.table("./UCI HAR Dataset/train/subject_train.txt")
     ##Add the subject as a new variable
     trainObs <- mutate(trainObs,subject=subjects$V1)
-    
-    
+    ##Write The table. 
+    write.table(trainObs,file = "CleanedTrainData.csv")        
 }
